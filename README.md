@@ -19,7 +19,7 @@ example:
   "description": "Isomorphic app that talk to rails API",
   "main": "index.js",
   "scripts": {
-    "test": " ./node_modules/.bin/jasmine-node spec"
+    "test": " mocha"
   },
   "repository": {
     "type": "git",
@@ -46,33 +46,10 @@ example:
 
 npm now is ready to use. Let's install some dependency.
 
-### install Express (node framework)
+brew update
+brew doctor
+brew upgrade node
 
-```sh
-npm install express --save
-```
---save option is to save the dependency onto your package.json file, like gemfile in rails
-
-### install Jasmine (test framework)
-
-```sh
-npm install request --save
-npm install jasmine-node -g
-```
-
--g option allow you to execute jasmine-node as a command
-
-How to run jasmine node test?
-
-```sh
-jasmine-node spec
-```
-
-Auto rerun jasmine node test on changes
-```sh
-jasmine-node spec --autotest --watch .
-```
-
-
-Reference
-http://blog.codeship.com/jasmine-node-js-application-testing-tutorial/
+create folder 'test'
+npm install mocha --save-dev -g
+npm install chai --save-dev
