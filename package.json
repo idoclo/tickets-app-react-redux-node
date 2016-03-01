@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/jchappypig/online-application-react-redux-node/issues"
   },
-  "homepage": "https://github.com/jchappypig/online-application-react-redux-node"
+  "homepage": "https://github.com/jchappypig/online-application-react-redux-node",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jasmine-node": "^1.14.5",
+    "request": "^2.69.0"
+  }
 }
