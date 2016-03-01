@@ -1,0 +1,26 @@
+{
+  "name": "online-application-react-redux-node",
+  "version": "1.0.0",
+  "description": "Isomorphic app that talk to rails API",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_packages/.bin/jasmine-node spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jchappypig/online-application-react-redux-node.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "node",
+    "rails",
+    "api"
+  ],
+  "author": "Huanhuan Huang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchappypig/online-application-react-redux-node/issues"
+  },
+  "homepage": "https://github.com/jchappypig/online-application-react-redux-node"
+}
