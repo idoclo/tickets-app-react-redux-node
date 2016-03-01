@@ -19,7 +19,7 @@ example:
   "description": "Isomorphic app that talk to rails API",
   "main": "index.js",
   "scripts": {
-    "test": "./node_packages/.bin/jasmine-node spec"
+    "test": " ./node_modules/.bin/jasmine-node spec"
   },
   "repository": {
     "type": "git",
