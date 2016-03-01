@@ -57,7 +57,7 @@ npm install express --save
 
 ```sh
 npm install request --save
-npm install jasmine-node --save
+npm install jasmine-node -g
 ```
 
 How to run jasmine test?
