@@ -60,11 +60,19 @@ npm install request --save
 npm install jasmine-node -g
 ```
 
-How to run jasmine test?
+-g option allow you to execute jasmine-node as a command
+
+How to run jasmine node test?
 
 ```sh
-./node_packages/.bin/jasmine-node spec
+jasmine-node spec
 ```
 
+Auto rerun jasmine node test on changes
+```sh
+jasmine-node spec --autotest --watch .
+```
+
+
 Reference
-https://semaphoreci.com/community/tutorials/getting-started-with-node-js-and-jasmine
+http://blog.codeship.com/jasmine-node-js-application-testing-tutorial/
