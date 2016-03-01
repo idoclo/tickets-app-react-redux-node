@@ -10,6 +10,7 @@ npm init
 ```
 
 It will generate a package.json file
+
 example:
 >
 {
