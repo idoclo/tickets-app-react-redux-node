@@ -53,3 +53,7 @@ brew upgrade node
 create folder 'test'
 npm install mocha --save-dev -g
 npm install chai --save-dev
+
+npm install --save pg 
+npm install --save sequelize
+npm install --save-dev -g sequelize-cli
