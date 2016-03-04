@@ -67,3 +67,5 @@ sequelize init
 config config/config.json
 sequelize migration:create --name create_table_tickets
 sequelize help:db:migrate
+
+npm install -g express-generator --save-dev
