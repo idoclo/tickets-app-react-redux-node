@@ -57,3 +57,13 @@ npm install chai --save-dev
 npm install --save pg 
 npm install --save sequelize
 npm install --save-dev -g sequelize-cli
+
+http://docs.sequelizejs.com/en/latest/docs/migrations/
+
+psql postgres
+create db
+
+sequelize init
+config config/config.json
+sequelize migration:create --name create_table_tickets
+sequelize help:db:migrate
