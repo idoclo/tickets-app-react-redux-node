@@ -78,4 +78,12 @@ node server/bin/www
     "test": "mocha",
     "start": "node server/bin/www"
   }
+  
+  connect sequelize with node
 
+sequelize db:migrate:undo --config server/config/config.json --migrations-path server/migrations
+
+sequelize model:create --name tickets --attributes device_type:string --config server/config/config.json --migrations-path server/migrations --models-path server/models
+sequelize model:create --name tickets --attributes device_type:string --attributes device_serial_no:string --attributes device_model:string --attributes device_screen_size:string --attributes contact_name:string --attributes contact_email:string
+sequelize model:create --name tickets --attributes device_type:string --attributes device_serial_no:string
+sequelize model:create --name tickets --attributes device_type:string
