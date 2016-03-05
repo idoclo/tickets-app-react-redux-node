@@ -94,7 +94,10 @@ module.exports = {
   'models-path':     path.resolve('server', 'models')
 }
 
+also need to config the models/index.js to point to the right config/database.json file.
+
+
 Reference:
 https://github.com/sequelize/cli
 
-sequelize model:create --name tickets --attributes device_type:string,device_serial_no:string,device_model:string,device_screen_size:string,contact_name:string,contact_email:string
+sequelize model:create --name Ticket --attributes device_type:string,device_serial_no:string,device_model:string,device_screen_size:string,contact_name:string,contact_email:string

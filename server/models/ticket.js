@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var tickets = sequelize.define('tickets', {
+  var Ticket = sequelize.define('Ticket', {
     device_type: DataTypes.STRING,
     device_serial_no: DataTypes.STRING,
     device_model: DataTypes.STRING,
@@ -14,5 +14,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return tickets;
+  return Ticket;
 };
