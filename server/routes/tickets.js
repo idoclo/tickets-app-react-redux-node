@@ -27,18 +27,18 @@ router.post('/', function(req, res) {
 
   ticket.save()
     .then(function() {
-    res.send('Ticket created successfully');
+      res.status(201).send('Ticket created successfully');
   }).catch(function(error) {
-    res.send('There is a problem when trying to create a ticket : ' + error);
+    res.status(400).send('There is a problem when trying to create a ticket : ' + error);
   });
 });
 
 router.get('/:id', function(req, res) {
   models.Ticket.findById(req.params.id).then(function(ticket) {
     if(ticket) {
-      res.send('Ticket found: ' + ticket.device_model);
+      res.json(ticket);
     } else {
-      res.send('Ticket not found');
+      res.status(404).send('Ticket is not found');
     }
   });
 });
@@ -48,7 +48,7 @@ router.delete('/:id', function(req, res) {
     if(ticketFound) {
       res.send('Ticket deleted');
     } else {
-      res.send('Ticket not found');
+      res.status(404).send('Ticket is not found');
     }
   });
 });
