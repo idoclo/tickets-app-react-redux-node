@@ -101,3 +101,6 @@ Reference:
 https://github.com/sequelize/cli
 
 sequelize model:create --name Ticket --attributes device_type:string,device_serial_no:string,device_model:string,device_screen_size:string,contact_name:string,contact_email:string
+
+var models  = require('./server/models');
+models.Ticket.create({device_type: 'IPhone', device_serial_no: 'uat1234', device_model: 'IPhone6sPlus', contact_name: 'Huanhuan Huang', contact_email: 'jchappypig@hotmail.com'});
