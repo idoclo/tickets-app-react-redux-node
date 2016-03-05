@@ -71,6 +71,8 @@ npm install -g express-generator --save-dev
 
 We will need to a start scrip for npm start as a server
 
+express server
+
 node server/bin/www
 "scripts": {
     "test": "mocha",
