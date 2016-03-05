@@ -27,9 +27,29 @@ router.post('/', function(req, res) {
 
   ticket.save()
     .then(function() {
-    res.send('Created successfully');
+    res.send('Ticket created successfully');
   }).catch(function(error) {
     res.send('There is a problem when trying to create a ticket : ' + error);
+  });
+});
+
+router.get('/:id', function(req, res) {
+  models.Ticket.findById(req.params.id).then(function(ticket) {
+    if(ticket) {
+      res.send('Ticket found: ' + ticket.device_model);
+    } else {
+      res.send('Ticket not found');
+    }
+  });
+});
+
+router.delete('/:id', function(req, res) {
+  models.Ticket.destroy({where: {id: req.params.id}}).then(function(ticketFound) {
+    if(ticketFound) {
+      res.send('Ticket deleted');
+    } else {
+      res.send('Ticket not found');
+    }
   });
 });
 
