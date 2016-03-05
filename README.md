@@ -1,5 +1,5 @@
 ## README
-Isomorphic app that talk to rails API
+React Redux and Node as an API
 
 ![alt text](http://nerds.airbnb.com/wp-content/uploads/2013/11/isomorphic-client-server-mvc.png "You see this because you are smart")
 
@@ -29,7 +29,6 @@ example:
     "react",
     "redux",
     "node",
-    "rails",
     "api"
   ],
   "author": "Huanhuan Huang",
@@ -69,3 +68,12 @@ sequelize migration:create --name create_table_tickets
 sequelize help:db:migrate
 
 npm install -g express-generator --save-dev
+
+We will need to a start scrip for npm start as a server
+
+node server/bin/www
+"scripts": {
+    "test": "mocha",
+    "start": "node server/bin/www"
+  }
+
