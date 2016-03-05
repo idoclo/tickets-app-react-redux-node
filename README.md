@@ -84,6 +84,17 @@ node server/bin/www
 sequelize db:migrate:undo --config server/config/config.json --migrations-path server/migrations
 
 sequelize model:create --name tickets --attributes device_type:string --config server/config/config.json --migrations-path server/migrations --models-path server/models
-sequelize model:create --name tickets --attributes device_type:string --attributes device_serial_no:string --attributes device_model:string --attributes device_screen_size:string --attributes contact_name:string --attributes contact_email:string
-sequelize model:create --name tickets --attributes device_type:string --attributes device_serial_no:string
-sequelize model:create --name tickets --attributes device_type:string
+
+create .sequelizerc file to move those flags into config
+var path = require('path')
+
+module.exports = {
+  'config':          path.resolve('server', 'config/database.json'),
+  'migrations-path': path.resolve('server', 'migrations'),
+  'models-path':     path.resolve('server', 'models')
+}
+
+Reference:
+https://github.com/sequelize/cli
+
+sequelize model:create --name tickets --attributes device_type:string,device_serial_no:string,device_model:string,device_screen_size:string,contact_name:string,contact_email:string
