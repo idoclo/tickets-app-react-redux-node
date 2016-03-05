@@ -104,3 +104,16 @@ sequelize model:create --name Ticket --attributes device_type:string,device_seri
 
 var models  = require('./server/models');
 models.Ticket.create({device_type: 'IPhone', device_serial_no: 'uat1234', device_model: 'IPhone6sPlus', contact_name: 'Huanhuan Huang', contact_email: 'jchappypig@hotmail.com'});
+
+npm install webpack -g
+npm install webpack --save
+npm install webpack-dev-server -g
+ npm install webpack-dev-server --save
+npm install --save-dev babel-loader babel-core
+npm install immutable --save
+npm install react-dom --save
+npm install react --save
+  npm install react-redux --save
+  npm install redux --save
+  npm install babel-preset-es2015 --save
+  npm install babel-preset-react --save
