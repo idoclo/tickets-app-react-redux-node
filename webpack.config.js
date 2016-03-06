@@ -1,7 +1,7 @@
 var path = require("path");
 module.exports = {
   entry: {
-    jsx: './client/components/app.jsx',
+    jsx: './client/index.jsx',
     html: './client/index.html',
   },
   output: {

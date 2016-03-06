@@ -129,7 +129,14 @@ https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopl
 npm install react-bootstrap  --save
 npm install bootstrap  --save
 
+https://github.com/reactjs/react-router-tutorial/blob/start/lessons/02-rendering-a-router.md
 
+Setup react with routes
+
+npm install react-router-redux --save
+npm install jquery --save
+npm install --save redux-actions
+ npm install immutable --save
 
 Not cover
 - Continuous deployment (CI, AWS deployment)
