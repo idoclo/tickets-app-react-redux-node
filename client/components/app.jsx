@@ -4,7 +4,9 @@ import DeviceType from './deviceType'
 
 let reactElement = document.getElementById('react')
 render(
-  <DeviceType></DeviceType>
+  <div>
+    <DeviceType></DeviceType>
+  </div>
   ,
   reactElement
 )
