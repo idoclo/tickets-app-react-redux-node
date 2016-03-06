@@ -141,6 +141,8 @@ npm install --save redux-actions
   npm install --save redux-logger redux-thunk
   npm install --save-dev react-hot-loader
   npm install --save-dev webpack-hot-middleware
+  
+  https://github.com/tj/frontend-boilerplate
 
 Not cover
 - Continuous deployment (CI, AWS deployment)
