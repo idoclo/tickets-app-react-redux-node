@@ -117,3 +117,10 @@ npm install react --save
   npm install redux --save
   npm install babel-preset-es2015 --save
   npm install babel-preset-react --save
+  
+Not cover
+- Continuous deployment (CI, AWS deployment)
+- Test
+- redux development tool
+- react hot loader
+- others
