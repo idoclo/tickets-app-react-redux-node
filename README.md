@@ -120,6 +120,8 @@ npm install react --save
   
 npm install --save react-router
 npm install file-loader --save-dev
+
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
   
 Not cover
 - Continuous deployment (CI, AWS deployment)
