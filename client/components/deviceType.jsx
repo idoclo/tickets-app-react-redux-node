@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 
 class DeviceType extends Component {
   handleClick() {
+    console.log('hello');
     console.log(this.pros);
     this.pros.dispatch(setDeviceType(e.target.text))
   }
