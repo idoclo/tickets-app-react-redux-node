@@ -1,8 +1,8 @@
-import ticketsReducer from './ticketsReducer'
+import ticketReducer from './ticketReducer'
 import {routerReducer } from 'react-router-redux'
 import {combineReducers} from 'redux'
 
 export default combineReducers({
   routing: routerReducer,
-  ticketsReducer
+  ticketReducer
 })
