@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 import { ButtonGroup } from 'react-bootstrap'
-import { setDeviceType } from '../actions'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as actions from '../actions'
 
 class DeviceType extends Component {
   handleClick(e) {
-    this.props.dispatch(setDeviceType(e.target.value))
+    let { dispatch } = this.props;
+    let action = actions.setDeviceType(e.target.value);
+    dispatch(action);
   }
   render() {
     return (
