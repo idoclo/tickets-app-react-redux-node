@@ -1,6 +1,9 @@
 var path = require("path");
 module.exports = {
-  entry: './client/components/app.jsx',
+  entry: {
+    jsx: './client/components/app.jsx',
+    html: './client/index.html',
+  },
   output: {
     path: path.resolve(__dirname, "build"),
     publicPath: "/",
@@ -15,6 +18,10 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
+      },
+      {
+        test: /\.html$/,
+        loader: "file?name=[name].[ext]"
       }
     ]
   },

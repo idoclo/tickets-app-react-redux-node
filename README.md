@@ -115,14 +115,16 @@ npm install react-dom --save
 npm install react --save
   npm install react-redux --save
   npm install redux --save
-  npm install babel-preset-es2015 --save
-  npm install babel-preset-react --save
+  npm install babel-preset-es2015 --save-dev
+  npm install babel-preset-react --save-dev
   
 npm install --save react-router
+npm install file-loader --save-dev
   
 Not cover
 - Continuous deployment (CI, AWS deployment)
 - Test
+- server side rendering
 - redux development tool
 - react hot loader
 - others
