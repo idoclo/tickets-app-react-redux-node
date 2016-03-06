@@ -118,6 +118,8 @@ npm install react --save
   npm install babel-preset-es2015 --save
   npm install babel-preset-react --save
   
+npm install --save react-router
+  
 Not cover
 - Continuous deployment (CI, AWS deployment)
 - Test
