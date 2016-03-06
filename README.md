@@ -123,8 +123,13 @@ npm install file-loader --save-dev
 
 https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 
+
+## connect react with bootstrap
+
 npm install react-bootstrap  --save
 npm install bootstrap  --save
+
+
 
 Not cover
 - Continuous deployment (CI, AWS deployment)
