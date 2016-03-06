@@ -5,23 +5,27 @@ import { setDeviceType } from '../actions'
 import { connect } from 'react-redux'
 
 class DeviceType extends Component {
-  handleClick() {
-    console.log('hello');
-    console.log(this.pros);
-    this.pros.dispatch(setDeviceType(e.target.text))
+  handleClick(e) {
+    this.props.dispatch(setDeviceType(e.target.value))
   }
   render() {
     return (
       <div>
         <h1>What is your device type?</h1>
         <ButtonGroup>
-          <Button bsSize="sm" block onclick={this.handleClick.bind(this)}>IPhone</Button>
-          <Button bsSize="sm" block onclick={this.handleClick.bind(this)}>MacBook</Button>
+          <Button bsSize="sm" block onClick={this.handleClick.bind(this)} value="IPhone">IPhone</Button>
+          <Button bsSize="sm" block onClick={this.handleClick.bind(this)} value="MacBook">MacBook</Button>
         </ButtonGroup>
       </div>
     )
   }
 }
 
-export default DeviceType
+function mapStateToProps(state) {
+  return {
+    state
+  }
+}
+
+export default connect(mapStateToProps)(DeviceType)
 

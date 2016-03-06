@@ -137,6 +137,10 @@ npm install react-router-redux --save
 npm install jquery --save
 npm install --save redux-actions
  npm install immutable --save
+ 
+  npm install --save redux-logger redux-thunk
+  npm install --save-dev react-hot-loader
+  npm install --save-dev webpack-hot-middleware
 
 Not cover
 - Continuous deployment (CI, AWS deployment)
