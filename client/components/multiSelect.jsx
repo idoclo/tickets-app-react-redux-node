@@ -4,7 +4,7 @@ import { ButtonGroup } from 'react-bootstrap'
 
 class MultiSelect extends Component {
   handleClick(e) {
-    this.props.action(e.target.value);
+    this.props.onChange(e.target.value);
   }
 
   render() {
