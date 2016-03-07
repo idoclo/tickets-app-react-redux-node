@@ -34,7 +34,7 @@ export default handleActions({
   'set_device_model' (state, action) {
     return state.set('device_model', action.payload)
   },
-  'set_device_serial_number' (state, action) {
+  'set_device_serial_no' (state, action) {
     return state.set('device_serial_no', action.payload)
   },
   'set_device_screen_size' (state, action) {

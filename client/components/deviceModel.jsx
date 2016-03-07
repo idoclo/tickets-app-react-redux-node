@@ -3,7 +3,7 @@ import MultiSelect from './multiSelect'
 
 class DeviceModel extends Component {
   render() {
-    let action = this.props.actions.setDeviceType;
+    let action = this.props.actions.setDeviceModel;
     let device_type = this.props.ticket.get('device_type')
 
     if(device_type){

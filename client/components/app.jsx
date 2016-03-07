@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import DeviceType from './deviceType'
 import DeviceModel from './deviceModel'
+import DeviceSerialNo from './deviceSerialNo'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <div>
         <DeviceType ticket={ticket} actions={actions}/>
         <DeviceModel ticket={ticket} actions={actions}/>
+        <DeviceSerialNo ticket={ticket} actions={actions}/>
       </div>
     )
   }
