@@ -3,13 +3,15 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import DeviceType from './deviceType'
+import DeviceModel from './deviceModel'
 
 class App extends Component {
   render() {
     let {ticket, actions} = this.props;
     return (
       <div>
-        <DeviceType ticket={ticket} actions={actions}></DeviceType>
+        <DeviceType ticket={ticket} actions={actions}/>
+        <DeviceModel ticket={ticket} actions={actions}/>
       </div>
     )
   }
