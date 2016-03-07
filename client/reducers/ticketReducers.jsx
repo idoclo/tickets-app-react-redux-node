@@ -1,6 +1,4 @@
 import {handleActions} from 'redux-actions'
-import {SET_DEVICE_TYPE, SET_DEVICE_MODEL, SET_DEVICE_SERIAL_NO, SET_DEVICE_SCREEN_SIZE,
-  SET_CONTACT_NAME, SET_CONTACT_EMAIL, SUBMIT_TICKET} from '../actions/actionTypes'
 import $ from 'jquery';
 import Immutable from 'immutable'
 
@@ -30,25 +28,25 @@ let submitTicket = (state, action) => {
 }
 
 export default handleActions({
-  SET_DEVICE_TYPE (state, action) {
+  'set_device_type' (state, action) {
     return state.set('device_type', action.payload)
   },
-  SET_DEVICE_MODEL (state, action) {
+  'set_device_model' (state, action) {
     return state.set('device_model', action.payload)
   },
-  SET_DEVICE_SERIAL_NO (state, action) {
+  'set_device_serial_number' (state, action) {
     return state.set('device_serial_no', action.payload)
   },
-  SET_DEVICE_SCREEN_SIZE (state, action) {
+  'set_device_screen_size' (state, action) {
     return state.set('device_screen_size', action.payload)
   },
-  SET_CONTACT_NAME (state, action) {
+  'set_contact_name' (state, action) {
     return state.set('contact_name', action.payload)
   },
-  SET_CONTACT_EMAIL (state, action) {
+  'set_contact_email' (state, action) {
     return state.set('contact_email', action.payload)
   },
-  SUBMIT_TICKET (state, action) {
+  'submit_ticket' (state, action) {
     return submitTicket(state, action)
   }
 }, initialState)
