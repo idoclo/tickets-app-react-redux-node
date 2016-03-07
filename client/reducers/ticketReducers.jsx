@@ -12,15 +12,16 @@ const initialState = Immutable.Map({
   errors: null
 })
 
-let submitTicket = (state, action) => {
+let submitTicket = (state) => {
   $.ajax({
     type: 'POST',
     url: '/api/tickets',
-    data: JSON.stringify(action.payload),
+    data: JSON.stringify(state.ticket),
     contentType: 'application/json',
     success(response) {
       console.log(response)
     }, error(xhr, ajaxOptions, thrownError) {
+      console.log(JSON.stringify(state));
       console.log('errors', xhr.status + ': ' + thrownError);
     }
   })
@@ -48,6 +49,6 @@ export default handleActions({
     return state.set('contact_email', action.payload)
   },
   'submit_ticket' (state, action) {
-    return submitTicket(state, action)
+    return submitTicket(state)
   }
 }, initialState)
