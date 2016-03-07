@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import DeviceType from './deviceType'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
+import DeviceType from './deviceType'
 
 class App extends Component {
   render() {
