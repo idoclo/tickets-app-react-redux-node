@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import TextInput from './textInput'
 
-class DeviceSerialNo extends Component {
+class ContactName extends Component {
   handleChange(value) {
-    let action = this.props.actions.setDeviceSerialNo;
+    let action = this.props.actions.setContactName;
     console.log(this.props.ticket);
     action(value)
   }
@@ -13,7 +13,7 @@ class DeviceSerialNo extends Component {
     if(device_type){
       return (
         <div>
-          <h3>What is your device serial number?</h3>
+          <h3>What is your name?</h3>
           <TextInput onChange={this.handleChange.bind(this)} />
         </div>
       )
@@ -25,5 +25,5 @@ class DeviceSerialNo extends Component {
   }
 }
 
-export default DeviceSerialNo
+export default ContactName
 

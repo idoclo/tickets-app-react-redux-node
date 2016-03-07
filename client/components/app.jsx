@@ -5,6 +5,9 @@ import * as actions from '../actions'
 import DeviceType from './deviceType'
 import DeviceModel from './deviceModel'
 import DeviceSerialNo from './deviceSerialNo'
+import DeviceScreenSize from './deviceScreenSize'
+import ContactName from './contactName'
+import ContactEmail from './contactEmail'
 
 class App extends Component {
   render() {
@@ -14,6 +17,9 @@ class App extends Component {
         <DeviceType ticket={ticket} actions={actions}/>
         <DeviceModel ticket={ticket} actions={actions}/>
         <DeviceSerialNo ticket={ticket} actions={actions}/>
+        <DeviceScreenSize ticket={ticket} actions={actions}/>
+        <ContactName ticket={ticket} actions={actions}/>
+        <ContactEmail ticket={ticket} actions={actions}/>
       </div>
     )
   }

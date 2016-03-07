@@ -12,7 +12,7 @@ class DeviceType extends Component {
     let options = ['IPhone', 'MacBook'];
     return (
       <div>
-        <h1>What is your device type?</h1>
+        <h3>What is your device type?</h3>
         <MultiSelect onChange={this.handleChange.bind(this)} options={options}/>
       </div>
     )

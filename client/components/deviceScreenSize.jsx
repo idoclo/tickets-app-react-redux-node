@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import MultiSelect from './multiSelect'
 
-class DeviceModel extends Component {
+class DeviceScreenSize extends Component {
   handleChange(value) {
-    let action = this.props.actions.setDeviceModel;
+    let action = this.props.actions.setDeviceScreenSize;
     console.log(this.props.ticket);
     action(value);
   }
@@ -11,14 +11,11 @@ class DeviceModel extends Component {
   render() {
     let device_type = this.props.ticket.get('device_type')
 
-    if(device_type){
-      let options = ['IPhone6', 'IPhone6S', 'IPhone6Plus', 'IPhone6SPlus']
-      if(device_type === 'MacBook'){
-        options = ['MacBookAir', 'MacBookPro'];
-      }
+    if(device_type == 'MacBook'){
+      let options = ['11 inch', '13 inch', '15 inch']
       return (
         <div>
-          <h3>What is your device model?</h3>
+          <h3>What is your device screen size?</h3>
           <MultiSelect onChange={this.handleChange.bind(this)} options={options}/>
         </div>
       )
@@ -30,5 +27,5 @@ class DeviceModel extends Component {
   }
 }
 
-export default DeviceModel
+export default DeviceScreenSize
 
