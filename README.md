@@ -3,41 +3,59 @@ React, Redux, React Router SPA and Node as an API
 ![alt text](http://nerds.airbnb.com/wp-content/uploads/2013/11/isomorphic-client-server-mvc.png "You see this because you are smart")
 
 ### Project setup
-1. Create a github repo
-2. Upgrade your node
+
+-- Create a github repo
+
+-- Upgrade your node
+
 ```sh
 brew update
 brew doctor
 brew upgrade node
 ```
-3. Setup npm, and generate a package.json
+
+-- Setup npm, and generate a package.json
 ```sh
 git clone <your repo>
 cd <your repo name>
 npm init
 ```
-4. We are going to seperate the projects the following structure
---client
---server
+
+-- We are going to seperate the projects the following structure
+
+-client
+-server
+
 
 ### First, let's go to server part (Nodejs)
-1. Create an express server
+
+-- Create an express server
 
 We are going to create the server using **express-generator**
 ```sh
 npm install -g express-generator
 ```
 **-g** option is to intall node module gobally, so that we can use **express** command in our terminal
-2. Express a server
+
+
+-- Express a server
+
 ```sh
 express server
 ```
+
 Now you actually have your basic server setup on your server folder. But we want to start up the app on the root folder, not the server folder. What we can do?
-3. Move client code and config code out and keep server code under server folder
-- remove <root_folder>/server/package.json
-- In your <root_folder>/package.json
-add a startup scrip under **scripts** secion
->"start": "node ./server/bin/www"
+
+
+-- Move client code and config code out and keep server code under server folder
+
+- Remove <root_folder>/server/package.json
+
+- Add a startup script under **scripts** section in your <root_folder>/package.json
+```
+"start": "node ./server/bin/www"
+```
+
 - Add the following dependencies in the <root_folder>/package.json under **dependencies** secion
 ```
     "body-parser": "~1.13.2",
@@ -48,25 +66,39 @@ add a startup scrip under **scripts** secion
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
 ```
-- move folder public to root folder
-4. Startup your server, and have a look
+
+- Move folder public to root folder
+
+
+-- Startup your server, and have a look
+
 ```sh
 npm start
 ```
-5. Have the the folders structure under server
-6. Try to create our own routes for tickets like example code for users in server
-7. remove users
+
+-- Have the the folders structure under server
+
+-- Try to create our own routes for tickets like example code for users in server
+
+-- remove users
+
+
 ### Time to move to DB (postgres + sequelize)
-1. Sequelize is like Ruby on rails Active Record
+
+#### Sequelize is like Ruby on rails Active Record
+
 ```sh
 npm install --save pg 
 npm install --save sequelize
 npm install --save-dev -g sequelize-cli
 ```
-2. Setup Sequalize
+
+#### Setup Sequalize
+
 ```sh
 sequalize init 
 ```
+
 It creates some folders **config, migrations, models, seeders** for database. Move those generated folders to **server** folder
 
 Update server/config/config.json (similiar to database.yml for Ruby on rails) for database config
@@ -84,14 +116,19 @@ Update server/config/config.json (similiar to database.yml for Ruby on rails) fo
   }
 }
 ```
-3. Manually create the database (Maybe there is a way to automatic it, needs to find out)
+
+
+#### Manually create the database (Maybe there is a way to automatic it, needs to find out)
+
 ```sh
 psql postgres
 postgres=# CREATE DATABASE tickets_development;
 postgres=# CREATE DATABASE tickets_test;
 postgres=# \q;
 ```
-4. Now the happy path. Sequelize can help us to do the rest.
+
+
+#### Now the happy path. Sequelize can help us to do the rest.
 
 Examples:
 
@@ -101,14 +138,17 @@ sequelize db:migrate
 
 sequelize db:migrate:undo
 
-5. Create our first model
+
+#### Create our first model
+
 ```sh
 sequelize model:create --name Ticket --attributes device_type:string,device_serial_no:string,device_model:string,device_screen_size:string,contact_name:string,contact_email:string
 ```
 
 You may notice that when we run sequelize command, we always need to providing options of the model config and migration path ( --config server/config/config.json --migrations-path server/migrations --models-path server/models ). It's because, we move the folders! 
 
-6. Customize sequelize command
+#### Customize sequelize command
+
 To make our lives easier in the future, we can config them in file .sequelizerc
 Create a file call **.sequelizerc** under root folder
 
@@ -122,21 +162,24 @@ module.exports = {
   'models-path':     path.resolve('server', 'models')
 }
 ```
+
 rename file server/config/config.json to server/config/database.json
 
-Reference:
+**Reference**:
 
 http://docs.sequelizejs.com/en/latest/docs/migrations/
 
 https://github.com/sequelize/cli
 
-7. Migrate the db
+
+#### Migrate the db
+
 ```sh
 sequelize db:migrate
 ```
 
 ### Connect Node with Sequelize
-1. update /tickets action
+#### update /tickets action
 
 How to talk to models in node code? easy
 
@@ -148,7 +191,7 @@ models.Ticket.findOne()
 models.Ticket.findById()
 Those methods will return a **promise**
 
-for GET /tickets, it would be
+for **GET /tickets**, it would be
 
 ```
 var models  = require('../models');
@@ -161,7 +204,7 @@ router.get('/', function(req, res, next) {
 });
 ```
 
-for POST /tickets, it would be
+for **POST /tickets**, it would be
 
 ```
 router.post('/', function(req, res) {
@@ -196,7 +239,7 @@ http://docs.sequelizejs.com/en/latest/docs/instances/
 
 http://docs.sequelizejs.com/en/latest/docs/models-usage/
 
-2. Test with postman
+#### Test with postman
 
 ## Here comes to client (React, Redux, Babel, ES6, Webpack, Redux Router)
 
@@ -224,7 +267,7 @@ npm install file-loader --save-dev
 https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 
 
-## connect react with bootstrap
+#### connect react with bootstrap
 
 npm install react-bootstrap  --save
 npm install bootstrap  --save
