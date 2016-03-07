@@ -9,7 +9,6 @@ const initialState = Immutable.Map({
   device_screen_size: null,
   contact_name: null,
   contact_email: null,
-  submitted: false,
   errors: null
 })
 
@@ -20,11 +19,13 @@ let submitTicket = (state, action) => {
     data: JSON.stringify(action.payload),
     contentType: 'application/json',
     success(response) {
-      return state.set('submitted', true)
+      console.log(response)
     }, error(xhr, ajaxOptions, thrownError) {
-      return state.set('errors', xhr.status + ': ' + thrownError)
+      console.log('errors', xhr.status + ': ' + thrownError);
     }
   })
+
+  return state;
 }
 
 export default handleActions({

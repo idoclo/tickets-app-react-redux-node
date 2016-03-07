@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import * as actions from '../../actions'
 import ContactName from '../../components/contactName'
 import ContactEmail from '../../components/contactEmail'
+import ActionButton from '../../components/actionButton'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <div>
         <ContactName ticket={ticket} actions={actions}/>
         <ContactEmail ticket={ticket} actions={actions}/>
+        <ActionButton action={actions.submitTicket}/>
       </div>
     )
   }
