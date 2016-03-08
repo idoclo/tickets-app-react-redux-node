@@ -15,7 +15,7 @@ const initialState = Immutable.Map({
 let submitTicket = (state) => {
   $.ajax({
     type: 'POST',
-    url: '/api/tickets',
+    url: 'http://localhost:3000/api/tickets',
     data: JSON.stringify(state.ticket),
     contentType: 'application/json',
     success(response) {
