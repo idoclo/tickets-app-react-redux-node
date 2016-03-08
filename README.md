@@ -69,6 +69,11 @@ Now you actually have your basic server setup on your server folder. But we want
 
 - Move folder public to root folder
 
+-- Install all dependencies:
+
+```
+npm install
+```
 
 -- Startup your server, and have a look
 
