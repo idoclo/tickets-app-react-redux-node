@@ -6,7 +6,7 @@ React, Redux, React Router SPA and Node as an API
 
 -- Create a github repo
 
--- Upgrade your node
+-- Upgrade your node (We can also manage our node version with NVM)
 
 ```sh
 brew update
