@@ -144,12 +144,6 @@ sequelize db:migrate
 sequelize db:migrate:undo
 
 
-#### Create our first model
-
-```sh
-sequelize model:create --name Ticket --attributes device_type:string,device_serial_no:string,device_model:string,device_screen_size:string,contact_name:string,contact_email:string
-```
-
 You may notice that when we run sequelize command, we always need to providing options of the model config and migration path ( --config server/config/config.json --migrations-path server/migrations --models-path server/models ). It's because, we move the folders! 
 
 #### Customize sequelize command
@@ -169,6 +163,12 @@ module.exports = {
 ```
 
 rename file server/config/config.json to server/config/database.json
+
+#### Create our first model
+
+```sh
+sequelize model:create --name Ticket --attributes device_type:string,device_serial_no:string,device_model:string,device_screen_size:string,contact_name:string,contact_email:string
+```
 
 **Reference**:
 
