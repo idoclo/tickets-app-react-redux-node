@@ -10,7 +10,7 @@ class MultiSelectQuestion extends Component {
     const {label, options} = this.props;
     return (
       <div>
-        <h3>{label}</h3>
+        <label style={{display: 'block'}}>{label}</label>
         <MultiSelect onChange={this.handleChange.bind(this)} options={options}/>
       </div>
     )
