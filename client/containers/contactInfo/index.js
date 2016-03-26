@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../../actions'
 import InputQuestion from '../../components/InputQuestion'
-import ActionButton from '../../components/actionButton'
+import ActionButton from '../.'
 
 class App extends Component {
   render() {
