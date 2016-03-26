@@ -11,22 +11,16 @@ class DeviceModel extends Component {
   render() {
     let device_type = this.props.ticket.get('device_type')
 
-    if(device_type){
-      let options = ['IPhone6', 'IPhone6S', 'IPhone6Plus', 'IPhone6SPlus']
-      if(device_type === 'MacBook'){
-        options = ['MacBookAir', 'MacBookPro'];
-      }
-      return (
-        <div>
-          <h3>What is your device model?</h3>
-          <MultiSelect onChange={this.handleChange.bind(this)} options={options}/>
-        </div>
-      )
-    }else{
-      return (
-        <div/>
-      )
+    let options = ['IPhone6', 'IPhone6S', 'IPhone6Plus', 'IPhone6SPlus']
+    if(device_type === 'MacBook'){
+      options = ['MacBookAir', 'MacBookPro'];
     }
+    return (
+      <div>
+        <h3>What is your device model?</h3>
+        <MultiSelect onChange={this.handleChange.bind(this)} options={options}/>
+      </div>
+    )
   }
 }
 
