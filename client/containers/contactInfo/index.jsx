@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../../actions'
-import ContactName from '../../components/contactName'
-import ContactEmail from '../../components/contactEmail'
+import InputQuestion from '../../components/InputQuestion'
 import ActionButton from '../../components/actionButton'
 
 class App extends Component {
@@ -11,8 +10,8 @@ class App extends Component {
     let {ticket, actions} = this.props;
     return (
       <div>
-        <ContactName ticket={ticket} actions={actions}/>
-        <ContactEmail ticket={ticket} actions={actions}/>
+        <InputQuestion label='What is your name?' value={ticket.get('contact_name')} action={actions.setContactName} />
+        <InputQuestion label='What is your email?' value={ticket.get('contact_email')} action={actions.setContactEmail} />
         <ActionButton action={actions.submitTicket}/>
       </div>
     )
