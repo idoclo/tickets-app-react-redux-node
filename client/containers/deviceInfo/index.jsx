@@ -15,7 +15,7 @@ class DeviceInfo extends Component {
         <DeviceModel ticket={ticket} actions={actions}/>
         <DeviceSerialNo ticket={ticket} actions={actions}/>
         <DeviceScreenSize ticket={ticket} actions={actions}/>
-        <NextButton nextUrl="/#/contactInfo"/>
+        <NextButton nextUrl="/contactInfo"/>
       </div>
     )
   }

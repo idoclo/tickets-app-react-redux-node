@@ -1,5 +1,4 @@
-import { createStore, applyMiddleware } from 'redux'
-import { browserHistory } from 'react-router'
+import { createStore, applyMiddleware } from 'redux';
 
 import { loggerMiddleware, thunkMiddleware } from '../middleware'
 import reducers from '../reducers'

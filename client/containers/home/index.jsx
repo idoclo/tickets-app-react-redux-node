@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <DeviceType ticket={ticket} actions={actions}/>
-        <NextButton nextUrl="/#/deviceInfo"/>
+        <NextButton nextUrl="/deviceInfo"/>
       </div>
     )
   }
