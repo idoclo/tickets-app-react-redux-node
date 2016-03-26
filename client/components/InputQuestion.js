@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Input } from 'react-bootstrap'
 
 const InputQuestion = ({label, type, value, action, show}) => {
@@ -17,7 +17,7 @@ const InputQuestion = ({label, type, value, action, show}) => {
 
 InputQuestion.propTypes = {
   label: React.PropTypes.string.isRequired,
-  value: React.PropTypes.string.isRequired,
+  value: React.PropTypes.string,
   action: React.PropTypes.func.isRequired,
   show: React.PropTypes.bool,
   type: React.PropTypes.string
