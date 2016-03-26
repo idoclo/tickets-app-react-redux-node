@@ -1,24 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Button } from 'react-bootstrap'
 import { ButtonGroup } from 'react-bootstrap'
 
-class MultiSelect extends Component {
-  handleClick(e) {
-    this.props.onChange(e.target.value);
-  }
-
-  render() {
-    let options= this.props.options;
-    console.log('hello')
-    return (
-      <ButtonGroup>
-        {options.map(
-          option => <Button bsSize="sm" block onClick={this.handleClick.bind(this)} value={option} key={option}>{option}</Button>
-        )}
-      </ButtonGroup>
-    )
-  }
-}
+const MultiSelect = ({options, onChange}) => (
+  <ButtonGroup>
+    {options.map(
+      option => <Button bsSize="sm" block onClick={onChange} value={option} key={option}>{option}</Button>
+    )}
+  </ButtonGroup>
+);
 
 export default MultiSelect
 
