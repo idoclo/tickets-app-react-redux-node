@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../../actions'
-import DeviceType from '../../components/deviceType'
+import MultiSelectQuestion from '../../components/MultiSelectQuestion'
 import NextButton from '../../components/nextButton'
 
 class App extends Component {
   render() {
-    let {ticket, actions} = this.props;
+    let {actions} = this.props;
     return (
       <div>
-        <DeviceType ticket={ticket} actions={actions}/>
+        <MultiSelectQuestion label='What is your device type?' options={['IPhone', 'MacBook']} action={actions.setDeviceType}/>
         <NextButton nextUrl="/#/deviceInfo"/>
       </div>
     )

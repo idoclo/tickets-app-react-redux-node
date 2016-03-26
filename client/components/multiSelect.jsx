@@ -9,6 +9,7 @@ class MultiSelect extends Component {
 
   render() {
     let options= this.props.options;
+    console.log('hello')
     return (
       <ButtonGroup>
         {options.map(
