@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import InputQuestion from '../components/InputQuestion'
-import ActionButton from '../components/actionButton'
+import NavButton from '../components/NavButton'
 
 const ContactInfo = ({ticket, actions}) => (
   <div>
     <InputQuestion label='What is your name?' value={ticket.get('contact_name')} action={actions.setContactName}/>
     <InputQuestion label='What is your email?' value={ticket.get('contact_email')} action={actions.setContactEmail}/>
-    <ActionButton action={actions.submitTicket}/>
+    <NavButton url='/ThankYou' action={actions.submitTicket}/>
   </div>
 );
 

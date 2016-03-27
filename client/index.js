@@ -8,6 +8,7 @@ import Layout from './containers/Layout'
 import Home from './containers/Home'
 import DeviceInfo from './containers/DeviceInfo'
 import ContactInfo from './containers/ContactInfo'
+import ThankYou from './containers/ThankYou'
 import configure from './store'
 
 const store = configure();
@@ -22,6 +23,7 @@ render(
         <IndexRoute component={Home}/>
         <Route path="deviceInfo" component={DeviceInfo}/>
         <Route path="contactInfo" component={ContactInfo}/>
+        <Route path="thankYou" component={ThankYou}/>
       </Route>
     </Router>
   </Provider>,

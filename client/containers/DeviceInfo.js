@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import MultiSelectQuestion from '../components/MultiSelectQuestion'
 import InputQuestion from '../components/InputQuestion'
-import NextButton from '../components/nextButton'
+import NavButton from '../components/NavButton'
 
 const DeviceInfo = ({ticket, actions}) => {
   let isMacBook = ticket.get('device_type')  === 'MacBook';
@@ -17,7 +17,7 @@ const DeviceInfo = ({ticket, actions}) => {
       <MultiSelectQuestion label='What is your device model?' options={deviceTypeOptions} action={actions.setDeviceModel}/>
       <InputQuestion label='What is your serial number?' value={ticket.get('device_serial_no')} action={actions.setDeviceSerialNo} />
       <MultiSelectQuestion label='What is your device size?' options={['11 inch', '13 inch', '15 inch']} action={actions.setDeviceScreenSize} show={ isMacBook }/>
-      <NextButton nextUrl="/#/contactInfo"/>
+      <NavButton url="/contactInfo"/>
     </div>
   )
 };

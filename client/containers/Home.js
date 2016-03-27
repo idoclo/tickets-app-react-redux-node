@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import MultiSelectQuestion from '../components/MultiSelectQuestion'
-import NextButton from '../components/nextButton'
+import NavButton from '../components/NavButton'
 
 const Home = ({actions}) =>  (
   <div>
     <MultiSelectQuestion label='What is your device type?' options={['IPhone', 'MacBook']} action={actions.setDeviceType}/>
-    <NextButton nextUrl="/#/deviceInfo"/>
+    <NavButton url="/deviceInfo"/>
   </div>
 );
 
