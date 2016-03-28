@@ -1,33 +1,7 @@
 import {handleActions} from 'redux-actions'
-import $ from 'jquery';
 import Immutable from 'immutable'
 
-const initialState = Immutable.Map({
-  device_type: null,
-  device_model: null,
-  device_serial_no: null,
-  device_screen_size: null,
-  contact_name: null,
-  contact_email: null,
-  errors: null
-})
-
-let submitTicket = (state) => {
-  $.ajax({
-    type: 'POST',
-    url: 'http://localhost:3000/api/tickets',
-    data: JSON.stringify(state.ticket),
-    contentType: 'application/json',
-    success(response) {
-      console.log(response)
-    }, error(xhr, ajaxOptions, thrownError) {
-      console.log(JSON.stringify(state));
-      console.log('errors', xhr.status + ': ' + thrownError);
-    }
-  })
-
-  return state;
-}
+const initialState = Immutable.Map({});
 
 export default handleActions({
   'set_device_type' (state, action) {
@@ -47,8 +21,5 @@ export default handleActions({
   },
   'set_contact_email' (state, action) {
     return state.set('contact_email', action.payload)
-  },
-  'submit_ticket' (state, action) {
-    return submitTicket(state)
   }
 }, initialState)

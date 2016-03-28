@@ -1,22 +1,22 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Ticket = sequelize.define('Ticket', {
-    device_type: {
+    deviceType: {
       type: DataTypes.STRING,
       validate: {
         notEmpty: {args: true, msg: "Device type cannot be empty"}
       }
     },
-    device_serial_no: DataTypes.STRING,
-    device_model: DataTypes.STRING,
-    device_screen_size: DataTypes.STRING,
-    contact_name: {
+    deviceSerialNo: DataTypes.STRING,
+    deviceModel: DataTypes.STRING,
+    deviceScreenSize: DataTypes.STRING,
+    contactName: {
       type: DataTypes.STRING,
       validate: {
         notEmpty: {args: true, msg: "Contact name cannot be empty"}
       }
     },
-    contact_email: {
+    contactEmail: {
       type: DataTypes.STRING,
       validate: {
         notEmpty: {args: true, msg: "Contact email cannot be empty"},

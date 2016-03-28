@@ -15,7 +15,7 @@ const DeviceInfo = ({ticket, actions}) => {
   return (
     <div>
       <MultiSelectQuestion label='What is your device model?' options={deviceTypeOptions} action={actions.setDeviceModel}/>
-      <InputQuestion label='What is your serial number?' value={ticket.get('device_serial_no')} action={actions.setDeviceSerialNo} />
+      <InputQuestion label='What is your serial number?' value={ticket.get('deviceSerialNo')} action={actions.setDeviceSerialNo} />
       <MultiSelectQuestion label='What is your device size?' options={['11 inch', '13 inch', '15 inch']} action={actions.setDeviceScreenSize} show={ isMacBook }/>
       <NavButton url="/contactInfo"/>
     </div>

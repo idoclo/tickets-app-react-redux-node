@@ -8,22 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      device_type: {
+      deviceType: {
         type: Sequelize.STRING
       },
-      device_serial_no: {
+      deviceSerialNo: {
         type: Sequelize.STRING
       },
-      device_model: {
+      deviceModel: {
         type: Sequelize.STRING
       },
-      device_screen_size: {
+      deviceScreenSize: {
         type: Sequelize.STRING
       },
-      contact_name: {
+      contactName: {
         type: Sequelize.STRING
       },
-      contact_email: {
+      contactEmail: {
         type: Sequelize.STRING
       },
       createdAt: {
