@@ -36,7 +36,7 @@ function mapDispatchToProps(dispatch) {
 
 DeviceInfo.propTypes = {
   ticket: React.PropTypes.object.isRequired,
-  actions: React.PropTypes.array.isRequired
+  actions: React.PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DeviceInfo);

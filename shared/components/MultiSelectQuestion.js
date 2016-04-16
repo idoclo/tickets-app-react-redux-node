@@ -8,18 +8,14 @@ const MultiSelectQuestion = ({label, options, action, show}) => {
       <MultiSelect onChange={(e) => action(e.target.value)} options={options}/>
     </div>
   );
-  return (
-    <div>
-      {show ? question : null}
-    </div>
-  );
+  return show ? question : null;
 };
 
 MultiSelectQuestion.propTypes = {
   label: React.PropTypes.string.isRequired,
-  options: React.PropTypes.array.isRequired,
   action: React.PropTypes.func.isRequired,
-  show: React.PropTypes.bool
+  show: React.PropTypes.bool,
+  options: React.PropTypes.array.isRequired
 };
 
 MultiSelectQuestion.defaultProps = {

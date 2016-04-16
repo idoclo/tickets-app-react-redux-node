@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
 
 ContactInfo.propTypes = {
   ticket: React.PropTypes.object.isRequired,
-  actions: React.PropTypes.array.isRequired
+  actions: React.PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactInfo);

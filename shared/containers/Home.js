@@ -25,7 +25,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 Home.propTypes = {
-  actions: React.PropTypes.array.isRequired
+  actions: React.PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
