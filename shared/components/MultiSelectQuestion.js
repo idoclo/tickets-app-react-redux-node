@@ -1,5 +1,5 @@
 import React from 'react'; 
-import MultiSelect from './multiSelect';
+import MultiSelect from './MultiSelect';
 
 const MultiSelectQuestion = ({label, options, action, show}) => {
   let question = (

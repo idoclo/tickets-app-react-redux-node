@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions';
 import MultiSelectQuestion from '../components/MultiSelectQuestion';
-import InputQuestion from '../components/InputQuestion';
+import InputQuestion from '../components/InputQuestion/InputQuestion';
 import NavButton from '../components/NavButton';
 
 const DeviceInfo = ({ticket, actions}) => {

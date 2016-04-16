@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../actions';
-import InputQuestion from '../components/InputQuestion';
+import InputQuestion from '../components/InputQuestion/InputQuestion';
 import NavButton from '../components/NavButton';
 import * as TicketsApi from '../lib/ticketsApi';
 
