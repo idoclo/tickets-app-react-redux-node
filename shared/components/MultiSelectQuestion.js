@@ -1,5 +1,5 @@
-import React from 'react'
-import MultiSelect from './multiSelect'
+import React from 'react'; 
+import MultiSelect from './multiSelect';
 
 const MultiSelectQuestion = ({label, options, action, show}) => {
   let question = (
@@ -12,7 +12,7 @@ const MultiSelectQuestion = ({label, options, action, show}) => {
     <div>
       {show ? question : null}
     </div>
-  )
+  );
 };
 
 MultiSelectQuestion.propTypes = {
@@ -26,5 +26,5 @@ MultiSelectQuestion.defaultProps = {
   show: true
 };
 
-export default MultiSelectQuestion
+export default MultiSelectQuestion;
 

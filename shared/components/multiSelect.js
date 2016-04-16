@@ -1,6 +1,6 @@
-import React from 'react'
-import { Button } from 'react-bootstrap'
-import { ButtonGroup } from 'react-bootstrap'
+import React from 'react'; 
+import { Button } from 'react-bootstrap';
+import { ButtonGroup } from 'react-bootstrap';
 
 const MultiSelect = ({options, onChange}) => (
   <ButtonGroup>
@@ -10,5 +10,10 @@ const MultiSelect = ({options, onChange}) => (
   </ButtonGroup>
 );
 
-export default MultiSelect
+MultiSelect.propTypes = {
+  options: React.PropTypes.array.isRequired,
+  onChange: React.PropTypes.func.isRequired
+};
+
+export default MultiSelect;
 

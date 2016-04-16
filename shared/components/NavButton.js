@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
-import {Button} from 'react-bootstrap'
+import React, { Component } from 'react';
+import {Button} from 'react-bootstrap';
 
 class NavButton extends Component {
   handleClick(e) {
     let {url, action} = this.props;
 
     action && action(e);
-    this.context.router.push(url)
-
+    this.context.router.push(url);
   }
 
   render() {
@@ -17,7 +16,7 @@ class NavButton extends Component {
       <Button onClick={this.handleClick.bind(this)}  bsStyle="primary">
         {text}
       </Button>
-    )
+    );
   }
 }
 

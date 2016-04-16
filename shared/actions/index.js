@@ -1,5 +1,5 @@
-import { createAction } from 'redux-actions'
-import * as actionTypes from './actionTypes'
+import { createAction } from 'redux-actions';
+import * as actionTypes from './actionTypes';
 
 export const setDeviceType = createAction(actionTypes.SET_DEVICE_TYPE);
 export const setDeviceModel = createAction(actionTypes.SET_DEVICE_MODEL);

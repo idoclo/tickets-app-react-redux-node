@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     deviceType: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty: {args: true, msg: "Device type cannot be empty"}
+        notEmpty: {args: true, msg: 'Device type cannot be empty'}
       }
     },
     deviceSerialNo: DataTypes.STRING,
@@ -13,14 +13,14 @@ module.exports = function(sequelize, DataTypes) {
     contactName: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty: {args: true, msg: "Contact name cannot be empty"}
+        notEmpty: {args: true, msg: 'Contact name cannot be empty'}
       }
     },
     contactEmail: {
       type: DataTypes.STRING,
       validate: {
-        notEmpty: {args: true, msg: "Contact email cannot be empty"},
-        isEmail: {args: true, msg: "Contact email is not a valid email"}
+        notEmpty: {args: true, msg: 'Contact email cannot be empty'},
+        isEmail: {args: true, msg: 'Contact email is not a valid email'}
       }
     }
   }, {

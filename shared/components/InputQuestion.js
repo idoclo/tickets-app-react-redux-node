@@ -1,5 +1,5 @@
-import React from 'react'
-import { Input } from 'react-bootstrap'
+import React from 'react'; 
+import { Input } from 'react-bootstrap';
 
 const InputQuestion = ({label, type, value, action, show}) => {
   let question = (
@@ -12,7 +12,7 @@ const InputQuestion = ({label, type, value, action, show}) => {
     <div>
       {show ? question : null}
     </div>
-  )
+  );
 };
 
 InputQuestion.propTypes = {

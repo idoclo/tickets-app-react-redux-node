@@ -1,5 +1,5 @@
-import axios from 'axios'
-import queryString  from 'query-string'
+import axios from 'axios';
+import queryString  from 'query-string';
 
 export function create(ticket) {
   let data = queryString.stringify(ticket.toObject());
@@ -12,11 +12,11 @@ export function create(ticket) {
   axios.post('http://localhost:3001/api/tickets', data, config).then(
     response => {
       console.log('Response status: ', response.statusText);
-      console.log('Response body: ', response.data)
+      console.log('Response body: ', response.data);
     }
   ).catch(
     error => {
       console.log('Response error: ', error);
     }
-  )
+  );
 }

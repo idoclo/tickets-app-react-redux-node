@@ -1,8 +1,7 @@
-import { createStore, applyMiddleware } from 'redux'
-import { browserHistory } from 'react-router'
+import { createStore, applyMiddleware } from 'redux';
 
-import { loggerMiddleware, thunkMiddleware } from '../middleware'
-import reducers from '../reducers'
+import { loggerMiddleware, thunkMiddleware } from '../middleware';
+import reducers from '../reducers';
 
 export default (initialState) => {
   const create = window.devToolsExtension
@@ -19,9 +18,9 @@ export default (initialState) => {
   if (module.hot) {
     module.hot.accept('../reducers', () => {
       const nextReducer = require('../reducers/index');
-      store.replaceReducer(nextReducer)
-    })
+      store.replaceReducer(nextReducer);
+    });
   }
 
-  return store
-}
+  return store;
+};

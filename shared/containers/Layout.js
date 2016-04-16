@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react'; 
 
 const Layout = ({children}) => (
   <div>
@@ -6,5 +6,9 @@ const Layout = ({children}) => (
     {children}
   </div>
 );
+
+Layout.propTypes = {
+  children: React.PropTypes.element.isRequired
+};
 
 export default Layout;

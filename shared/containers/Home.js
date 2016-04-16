@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import * as actions from '../actions'
-import MultiSelectQuestion from '../components/MultiSelectQuestion'
-import NavButton from '../components/NavButton'
+import React from 'react'; 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../actions';
+import MultiSelectQuestion from '../components/MultiSelectQuestion';
+import NavButton from '../components/NavButton';
 
 const Home = ({actions}) =>  (
   <div>
@@ -15,13 +15,17 @@ const Home = ({actions}) =>  (
 function mapStateToProps(state) {
   return {
     ticket: state.ticketReducers
-  }
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(actions, dispatch)
-  }
+  };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+Home.propTypes = {
+  actions: React.PropTypes.array.isRequired
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
