@@ -7,7 +7,7 @@ import InputQuestion from '../components/InputQuestion'
 import NavButton from '../components/NavButton'
 
 const DeviceInfo = ({ticket, actions}) => {
-  let isMacBook = ticket.get('device_type')  === 'MacBook';
+  let isMacBook = ticket.get('deviceType')  === 'MacBook';
   let deviceTypeOptions = (
     isMacBook ? ['MacBookAir', 'MacBookPro'] : ['IPhone6', 'IPhone6S', 'IPhone6Plus', 'IPhone6SPlus']
   );

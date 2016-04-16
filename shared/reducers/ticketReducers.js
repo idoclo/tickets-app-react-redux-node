@@ -4,22 +4,22 @@ import Immutable from 'immutable'
 const initialState = Immutable.Map({});
 
 export default handleActions({
-  'set_device_type' (state, action) {
-    return state.set('device_type', action.payload)
+  'setDeviceType' (state, action) {
+    return state.set('deviceType', action.payload)
   },
-  'set_device_model' (state, action) {
-    return state.set('device_model', action.payload)
+  'setDeviceModel' (state, action) {
+    return state.set('deviceModel', action.payload)
   },
-  'set_device_serial_no' (state, action) {
-    return state.set('device_serial_no', action.payload)
+  'setDeviceSerialNo' (state, action) {
+    return state.set('deviceSerialNo', action.payload)
   },
-  'set_device_screen_size' (state, action) {
-    return state.set('device_screen_size', action.payload)
+  'setDeviceScreenSize' (state, action) {
+    return state.set('deviceScreenSize', action.payload)
   },
-  'set_contact_name' (state, action) {
-    return state.set('contact_name', action.payload)
+  'setContactName' (state, action) {
+    return state.set('contactName', action.payload)
   },
-  'set_contact_email' (state, action) {
-    return state.set('contact_email', action.payload)
+  'setContactEmail' (state, action) {
+    return state.set('contactEmail', action.payload)
   }
 }, initialState)

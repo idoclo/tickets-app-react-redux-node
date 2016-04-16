@@ -9,20 +9,20 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res) {
-  var device_type = req.body.device_type;
-  var device_serial_no = req.body.device_serial_no;
-  var device_model = req.body.device_model;
-  var device_screen_size = req.body.device_screen_size;
-  var contact_name = req.body.contact_name;
-  var contact_email = req.body.contact_email;
+  var deviceType = req.body.deviceType;
+  var deviceSerialNo = req.body.deviceSerialNo;
+  var deviceModel = req.body.deviceModel;
+  var deviceScreenSize = req.body.deviceScreenSize;
+  var contactName = req.body.contactName;
+  var contactEmail = req.body.contactEmail;
 
   var ticket = models.Ticket.build({
-    device_type: device_type,
-    device_serial_no: device_serial_no,
-    device_model: device_model,
-    device_screen_size: device_screen_size,
-    contact_name: contact_name,
-    contact_email: contact_email
+    deviceType: deviceType,
+    deviceSerialNo: deviceSerialNo,
+    deviceModel: deviceModel,
+    deviceScreenSize: deviceScreenSize,
+    contactName: contactName,
+    contactEmail: contactEmail
   });
 
   ticket.save()
@@ -34,22 +34,22 @@ router.post('/', function(req, res) {
 });
 
 router.put('/:id', function(req, res) {
-  var device_type = req.body.device_type;
-  var device_serial_no = req.body.device_serial_no;
-  var device_model = req.body.device_model;
-  var device_screen_size = req.body.device_screen_size;
-  var contact_name = req.body.contact_name;
-  var contact_email = req.body.contact_email;
+  var deviceType = req.body.deviceType;
+  var deviceSerialNo = req.body.deviceSerialNo;
+  var deviceModel = req.body.deviceModel;
+  var deviceScreenSize = req.body.deviceScreenSize;
+  var contactName = req.body.contactName;
+  var contactEmail = req.body.contactEmail;
 
   models.Ticket.findById(req.params.id).then(function(ticket) {
     if(ticket) {
       ticket.update({
-        device_type: device_type,
-        device_serial_no: device_serial_no,
-        device_model: device_model,
-        device_screen_size: device_screen_size,
-        contact_name: contact_name,
-        contact_email: contact_email
+        deviceType: deviceType,
+        deviceSerialNo: deviceSerialNo,
+        deviceModel: deviceModel,
+        deviceScreenSize: deviceScreenSize,
+        contactName: contactName,
+        contactEmail: contactEmail
       }).then(function() {
         res.send('Ticket updated successfully');
       }).catch(function(error) {
