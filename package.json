@@ -4,8 +4,8 @@
   "description": "React Redux and Node as an API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000"
+    "start": "node server/bin/www",
+    "dev": "npm run start & webpack-dev-server --hot"
   },
   "repository": {
     "type": "git",

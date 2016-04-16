@@ -35,7 +35,7 @@ module.exports = {
       {
         test: /\.css/,
         exclude: /(node_modules)/,
-        loaders: ['style', 'css']
+        loaders: [ 'style', 'css' ]
       }
     ]
   },
@@ -44,6 +44,9 @@ module.exports = {
   },
   plugins: [ commonPlugin ],
   devServer: {
-    hot: true
+    colors: true,
+    inline: true,
+    noInfo: true,
+    port: 3000
   }
 };
