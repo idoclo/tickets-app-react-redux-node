@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 import InputQuestion from '../components/InputQuestion'
 import NavButton from '../components/NavButton'
-import * as TicketsApi from '../utils/ticketsApi'
+import * as TicketsApi from '../lib/ticketsApi'
 
 const ContactInfo = ({ticket, actions}) => (
   <div>
